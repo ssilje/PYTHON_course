@@ -1,0 +1,13 @@
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+
+import numpy as np
+
+x = np.arange(0, 10, 0.1)
+
+f, ax = plt.subplots()
+ax.plot(x, np.sin(x));
+
+
+

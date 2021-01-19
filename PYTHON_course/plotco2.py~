@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+import netCDF4 as nc
+import numpy as np
+
+%matplotlib inline
+
+
+x = np.arange(0, 3 * np.pi, 0.01)
+
+y = np.sin(x)
+
+
+# name of the data file
+fN = '/home/ssilje/PYTHON_course/pyvis/data/co2.nc'
+
+ncf = nc.Dataset(fN)
+
+year = ncf.variables['year'][:]
+co2 = ncf.variables['co2_annual'][:]
+
+print(year[:3])
+print(co2[:3])
+
+
+

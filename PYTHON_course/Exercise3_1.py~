@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import xarray as xr
+
+import cartopy.crs as ccrs
+
+fN = 'pyvis/data/ARGO_ATL_20171230.nc'
+ATL = xr.open_dataset(fN)
+
+fN = 'pyvis/data/ARGO_IND_20171230.nc'
+IND = xr.open_dataset(fN)
+
+fN = 'pyvis/data/ARGO_PAC_20171230.nc'
+PAC = xr.open_dataset(fN)
+
+ATL

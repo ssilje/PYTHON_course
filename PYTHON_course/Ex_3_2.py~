@@ -1,0 +1,29 @@
+import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
+import numpy as np
+import xarray as xr
+
+import mplotutils as mpu
+
+
+fN = 'pyvis/data/cmip5_delta_pr_rcp85_map.nc'
+
+# load data, omitting some unecessary variables
+pr = xr.open_dataset(fN, drop_variables=['pr_rel', 'proj', 'agree_sign', 'pval'])
+
+
+
+
+
+
+# ====
+
+ax = plt.axes(projection=ccrs.PlateCarree())
+
+ax.coastlines()
+
+ax.pcolormesh(lon, lat, data)
+
+ax.set_global()
+
+plt.show()

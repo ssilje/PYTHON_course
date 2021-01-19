@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+import netCDF4 as nc
+
+# load data
+
+fN = '/home/ssilje/PYTHON_course/pyvis/data/cmip5_tas_rcp85_ts.nc'
+
+ncf = nc.Dataset(fN)
+
+# the with construct automatically closes the dataset once we are done
+with nc.Dataset(fN) as ncf:
+    
+    year = ncf.variables['year'][:]
+    tas = ncf.variables['tas'][:]

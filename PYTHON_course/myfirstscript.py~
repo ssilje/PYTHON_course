@@ -1,0 +1,20 @@
+print("This line will be printed.")
+
+# hashmarks are comments in Python
+
+print("Type a line and execute the cell")
+
+print()
+
+a = 'A string '
+b = 'and another string'
+print(a + b + ' are concatenated by "+."')
+
+print()
+
+multiline_string = """You can create multiline strings by
+enclosing them in three consecutive
+quotes
+"""
+
+print(multiline_string)
